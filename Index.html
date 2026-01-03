@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CWquery Studio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="dark">
+  <header class="top-bar">
+    <h1>CWquery Studio</h1>
+    <div class="top-right">
+      <div class="command-guide">
+        <button id="guideToggle">📘 Command Guide ▾</button>
+        <div id="guideBox" class="hidden"></div>
+      </div>
+      <label class="dark-label">
+        🌙 Dark Mode
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle" checked />
+          <span class="slider round"></span>
+        </label>
+      </label>
+    </div>
+  </header>
+ 
+  <main class="grid-container">
+    <section class="card left">
+      <h2>Query Builder</h2>
+ 
+      <label for="templateSelect">⬇️ Select Template:</label>
+      <select id="templateSelect"></select>
+ 
+      <label for="eventInput">🆔 Event ID's:</label>
+      <textarea id="eventInput" placeholder="Enter one per line"></textarea>
+ 
+      <button onclick="generateQuery()">Generate Query</button>
+    </section>
+ 
+    <section class="card right">
+      <h2>Generated Query</h2>
+      <pre id="outputQuery"></pre>
+      <button id="copyBtn">📋 Copy Query</button>
+    </section>
+  </main>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
